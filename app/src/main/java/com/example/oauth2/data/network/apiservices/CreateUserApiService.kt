@@ -16,6 +16,7 @@ interface CreateUserApiService {
         @Field("redirect_uri") redirect_uri: String
     ): AuthTokenDto
 
+    @Headers("Content-Type: application/json")
     @GET("/authorize")
     suspend fun fetchAuthorize(): AuthorizeModelDto
 
